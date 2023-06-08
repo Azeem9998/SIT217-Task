@@ -1,12 +1,6 @@
-// int rightIR=2;// purple wire
-// int leftIR=3;// black wire
-// // 5th pin 3 and 4th mototr red
-// //9th pin 1 and 2 motor dark green
- int A=10; // dark green
- int B=11;
+int A=10; 
+int B=11;
 int speed;
-
-
 
 char input;     // to store input character received via BT.
 
@@ -17,11 +11,10 @@ void setup()
   pinMode(5, OUTPUT);
   pinMode(6, OUTPUT);
   pinMode(7, OUTPUT);
-  // pinMode(2,INPUT);
-  // pinMode(3,INPUT);
+
   pinMode(A0,INPUT);
-  pinMode(A, OUTPUT); // dark green 3rd and 4th motor
-  pinMode(B,OUTPUT); // red 1 and 2nd motor
+  pinMode(A, OUTPUT); 
+  pinMode(B,OUTPUT); 
 }
 
 void loop()
@@ -31,12 +24,6 @@ void loop()
   analogWrite(A,speed);
   analogWrite(B,speed);
 
-  if (digitalRead(2) == LOW)
-  {
-    stop();
-  }
-
-  // speed= 255;
   while(Serial.available())
   {
     input =Serial.read();
@@ -70,8 +57,6 @@ void loop()
 
     
     }  
-
- 
 
   }
 
